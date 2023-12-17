@@ -17,7 +17,7 @@ use winapi::{um::{tlhelp32::{TH32CS_SNAPPROCESS, TH32CS_SNAPMODULE, TH32CS_SNAPM
              shared::{minwindef::{FALSE, LPCVOID, LPVOID, BOOL, PBOOL}, basetsd::SIZE_T},
 };
 
-#[derive(Debug)]
+#[derive(Debug,Clone)]
 /// contains name, pid and handle of a process
 pub struct Process {
     pub process_name: String,
